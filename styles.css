@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'Norse-Bold';
+    font-weight: bold;
+    font-style: normal;
+    src: url("assets/Norse-Bold.otf") format("opentype");
+}
+
+body {
+    margin: 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(221, 221, 221);
+}
+
+.container {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    height: 100vh;
+}
+
+#left-side {
+    font-family: 'Norse-Bold', 'Segoe UI', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 8rem 0;
+}
+
+#background-img {
+    position: relative;
+    max-width: 100%;
+    min-width: 200px;
+    height: 100vh;
+}
+
+#title-box {
+    background-color: rgb(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2.5em;
+    position: absolute;
+    top: 150px;
+    width: 32%;
+}
+
+#odin-title {
+    padding-top: 10px;
+}
+
+#p-container, #form-container, #bottom-containers {
+    width: 100%;
+    height: 100%;
+}
+
+#white-background {
+    background-color: white;
+    padding: 30px;
+}
+
+#form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    width: 80%;
+}
+
+.label-input-div {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
