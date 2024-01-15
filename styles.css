@@ -1,80 +1,107 @@
-@font-face {
-    font-family: 'Norse-Bold';
-    font-weight: bold;
-    font-style: normal;
-    src: url("assets/Norse-Bold.otf") format("opentype");
-}
-
 body {
     margin: 0;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    background-color: rgb(221, 221, 221);
-}
-
-.container {
-    margin: 0;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 20% 3fr 1fr;
+    grid-template-rows: 20% 1fr;
     height: 100vh;
 }
 
-#left-side {
-    font-family: 'Norse-Bold', 'Segoe UI', sans-serif;
+#sidebar {
+    background-color: rgb(32, 109, 252);
+    grid-row: span 2;
+}
+
+#header {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    grid-column: span 2;
+}
+
+#proj-wrapper {
+    grid-column: 2;
+    grid-row: 2;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgb(186, 186, 186);
+  }
+
+#projects {
+    display: grid;
+    grid-template-rows: 50px repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr;
+    row-gap: 20px;
+}
+
+#section-header {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: -10px;
 }
 
-#right-side {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    margin: 8rem 0;
+h2 {
+    font-size: 1.5rem;
 }
 
-#background-img {
-    position: relative;
-    max-width: 100%;
-    min-width: 200px;
-    height: 100vh;
-}
-
-#title-box {
-    background-color: rgb(0, 0, 0, 0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 2.5em;
-    position: absolute;
-    top: 150px;
-    width: 32%;
-}
-
-#odin-title {
-    padding-top: 10px;
-}
-
-#p-container, #form-container, #bottom-containers {
-    width: 100%;
-    height: 100%;
-}
-
-#white-background {
+.proj-card {
+    width: 25rem;
+    height: 14rem;
     background-color: white;
-    padding: 30px;
-}
-
-#form-grid {
+    border-left: 10px solid orange;
+    border-radius: 20px;
+    padding: 20px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, auto);
-    width: 80%;
+    grid-template-rows: 80% 1fr;
 }
 
-.label-input-div {
+.card-bottom {
     display: flex;
-    flex-direction: column;
-    width: 50%;
+    justify-content: flex-end;
+}
+
+.proj-icon {
+    width: 25px;
+    margin-right: 15px;
+}
+
+#announcements-col {
+    background-color: rgb(186, 186, 186);
+    display: grid;
+    grid-template-rows: 50px 1fr 1fr;
+    padding-top: 20px;
+    padding-right: 20px;
+}
+
+#announcements-card {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.ann-section {
+    background-color: white;
+}
+
+#trending {
+    margin-top: 20px;
+}
+
+#trending-card {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    height: 18.75rem;
+}
+
+.trending-item {
+    display: grid;
+    grid-template-columns: 20% 1fr;
+}
+
+.trending-text {
+    line-height: 4px;
 }
